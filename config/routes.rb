@@ -3,5 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get "product_all" => "products#product_all"
+  # get "tesla", controller: "products", action: "tesla_json"
+  get "/products" => "products#index"
+  get "/products" => "products#show"
+  post "/products" => "products#create"
 end
