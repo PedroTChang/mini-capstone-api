@@ -15,3 +15,14 @@ Content-type: application/json
   "description": "test description",
   "image_url": "test image_url"
 }
+
+### Products Update
+PATCH http://localhost:3000/products/5
+Content-type: application/json
+
+{
+  "name": "Rolex Watch",
+  "price": 54654,
+  "description": "A fancy watch",
+  "image_url": "test image_url"
+}

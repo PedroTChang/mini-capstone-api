@@ -9,5 +9,12 @@ puts table.render(:ascii)
 # puts "Welcome to my store!"
 # print "Enter a product number [1] - [3]"
 
-response = HTTP.get("http://localhost/one_product/1")
+#index
+response = HTTP.get("http://localhost/products")
 products = response.parse
+
+#show
+
+#create
+
+#update
