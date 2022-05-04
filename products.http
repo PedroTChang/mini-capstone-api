@@ -1,0 +1,9 @@
+### Products Index
+GET http://localhost:3000/products
+
+### Products show
+GET http://localhost:3000/products
+
+
+### Products create
+GET http://localhost:3000/products

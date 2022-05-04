@@ -10,6 +10,13 @@ class ProductsController < ApplicationController
   end
 
   def create
-    rend json: { message: "Imma making a recipe" }
+    product = Product.new(
+      title: "JBC Pre-amp",
+      price: 13452,
+      image_url: "test",
+      description: "A fancy pre-amp",
+    )
+    product.save
+    rend json: product.as_json
   end
 end
