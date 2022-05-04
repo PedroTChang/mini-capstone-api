@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   # get "tesla", controller: "products", action: "tesla_json"
   get "/products" => "products#index"
-  get "/products" => "products#show"
+  get "/products/:id" => "products#show"
   post "/products" => "products#create"
+  patch "/products" => "products#update"
 end

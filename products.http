@@ -2,8 +2,16 @@
 GET http://localhost:3000/products
 
 ### Products show
-GET http://localhost:3000/products
+GET http://localhost:3000/products/4
 
 
 ### Products create
-GET http://localhost:3000/products
+POST http://localhost:3000/products
+Content-type: application/json
+
+{
+  "name": "test name",
+  "price": "test price",
+  "description": "test description",
+  "image_url": "test image_url"
+}
