@@ -2,7 +2,7 @@
 GET http://localhost:3000/products
 
 ### Products show
-GET http://localhost:3000/products/4
+GET http://localhost:3000/products/6
 
 
 ### Products create
@@ -16,7 +16,7 @@ Content-type: application/json
   "image_url": "test image_url"
 }
 
-### Products Update
+### Products update
 PATCH http://localhost:3000/products/5
 Content-type: application/json
 
@@ -26,3 +26,7 @@ Content-type: application/json
   "description": "A fancy watch",
   "image_url": "test image_url"
 }
+
+### Products destroy
+DELETE http://localhost:3000/products/6
+
