@@ -29,8 +29,9 @@ class ProductsController < ApplicationController
     product.price = params["price"] || product.price
     product.description = params["description"] || product.description
     product.image_url = params["image_url"] || product.image_url
+    @product = product
     product.save
-    render json: product.as_json
+    render template: "products/show"
   end
 
   def destroy
