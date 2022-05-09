@@ -12,6 +12,18 @@ class Product < ApplicationRecord
   end
 
   def tax
-    return "$#{price * 0.0975}"
+    price * 0.0975
+  end
+
+  def is_discounted?
+    price < 10
+  end
+
+  def total
+    price + tax
+  end
+
+  def total_in_dollar
+    "$#{total}"
   end
 end

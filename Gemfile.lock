@@ -83,6 +83,7 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
+    jb (0.8.0)
     loofah (2.16.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -164,6 +165,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  jb
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors

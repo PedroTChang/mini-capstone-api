@@ -1,8 +1,8 @@
 ### Products Index
-GET http://localhost:3000/products
+GET http://localhost:3000/products.json
 
 ### Products show
-GET http://localhost:3000/products/1
+GET http://localhost:3000/products/1.json
 
 
 ### Products create
