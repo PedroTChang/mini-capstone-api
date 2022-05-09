@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    products = Product.all
+    @products = Product.all
     render template: "products/index"
   end
 
@@ -17,7 +17,8 @@ class ProductsController < ApplicationController
       image_url: params["image_url"],
     )
     product.save
-    render json: product.as_json
+    @product = product
+    render template: "products/show"
   end
 
   def update

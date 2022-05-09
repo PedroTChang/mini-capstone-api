@@ -6,7 +6,7 @@ GET http://localhost:3000/products/1.json
 
 
 ### Products create
-POST http://localhost:3000/products
+POST http://localhost:3000/products.json
 Content-type: application/json
 
 {
