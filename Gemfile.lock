@@ -149,6 +149,9 @@ GEM
     rake (13.0.6)
     reline (0.3.1)
       io-console (~> 0.5)
+    seed_dump (3.3.1)
+      activerecord (>= 4)
+      activesupport (>= 4)
     strscan (3.0.1)
     thor (1.2.1)
     timeout (0.2.0)
@@ -170,6 +173,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.2, >= 7.0.2.3)
+  seed_dump
   tzinfo-data
 
 RUBY VERSION
