@@ -4,15 +4,15 @@ class Product < ApplicationRecord
   end
 
   def friendly_created
-    return created_at.strftime("%e %b %Y %H:%M:%S%p")
+    return created_at.strftime("%e %b %Y %H:%M:%S%Z")
   end
 
   def friendly_updated
-    return updated_at.strftime("%e %b %Y %H:%M:%S%p")
+    return updated_at.strftime("%e %b %Y %H:%M:%S%Z")
   end
 
   def tax
-    price * 0.0975
+    (price * 0.0975).round(2)
   end
 
   def is_discounted?
@@ -20,10 +20,10 @@ class Product < ApplicationRecord
   end
 
   def total
-    price + tax
+    (price + tax).round(2)
   end
 
   def total_in_dollar
-    "$#{total}"
+    "$#{total.round(2)}"
   end
 end
