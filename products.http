@@ -10,14 +10,14 @@ POST http://localhost:3000/products.json
 Content-type: application/json
 
 {
-  "name": "test name",
-  "price": "test price",
+  "name": "cool",
+  "price": -10,
   "description": "test description",
   "image_url": "test image_url"
 }
 
 ### Products update
-PATCH http://localhost:3000/products/6.json
+PATCH http://localhost:3000/products/5.json
 Content-type: application/json
 
 {

@@ -1,5 +1,6 @@
 {
   id: product.id,
+  name: product.name,
   created_at: product.created_at,
   updated_at: product.updated_at,
   description: product.description,

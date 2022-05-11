@@ -16,9 +16,12 @@ class ProductsController < ApplicationController
       description: params["description"],
       image_url: params["image_url"],
     )
-    product.save
     @product = product
-    render template: "products/show"
+    if product.save
+      render template: "products/show"
+    else
+      render json: { message: "Please check your input values." }
+    end
   end
 
   def update
@@ -30,8 +33,11 @@ class ProductsController < ApplicationController
     product.description = params["description"] || product.description
     product.image_url = params["image_url"] || product.image_url
     @product = product
-    product.save
-    render template: "products/show"
+    if product.save
+      render template: "products/show"
+    else
+      render json: { message: "Please check your input values." }
+    end
   end
 
   def destroy
