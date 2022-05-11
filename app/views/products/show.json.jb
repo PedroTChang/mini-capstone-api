@@ -1,15 +1,16 @@
-{
-  id: @product.id,
-  description: @product.description,
-  image_url: @product.image_url,
-  friendly_created: @product.friendly_created,
-  friendly_updated: @product.friendly_updated,
-  dollar_price: @product.dollar_price,
-  is_discounted?: @product.is_discounted?,
-  tax: @product.tax,
-  total: @product.total,
-  total_in_dollar: @product.total_in_dollar,
-  quantity: @product.quantity,
-  created_at: @product.created_at,
-  updated_at: @product.updated_at,
-}
+render "products/products", product: @product
+# {
+#   id: @product.id,
+#   description: @product.description,
+#   image_url: @product.image_url,
+#   friendly_created: @product.friendly_created,
+#   friendly_updated: @product.friendly_updated,
+#   dollar_price: @product.dollar_price,
+#   is_discounted?: @product.is_discounted?,
+#   tax: @product.tax,
+#   total: @product.total,
+#   total_in_dollar: @product.total_in_dollar,
+#   quantity: @product.quantity,
+#   created_at: @product.created_at,
+#   updated_at: @product.updated_at,
+# }
