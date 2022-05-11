@@ -1,0 +1,30 @@
+### supplier Index
+GET http://localhost:3000/suppliers.json
+
+### Suppliers show
+GET http://localhost:3000/suppliers/1.json
+
+
+### Suppliers create
+POST http://localhost:3000/supplier.json
+Content-type: application/json
+
+{
+  "name": "test name",
+  "email": "test email",
+  "phone-number": "test phone-number"
+}
+
+### supplier update
+PATCH http://localhost:3000/supplier/5.json
+Content-type: application/json
+
+{
+  "name": "test name",
+  "email": "test email",
+  "phone-number": "test phone-number"
+}
+
+### supplier destroy
+DELETE http://localhost:3000/supplier/2
+

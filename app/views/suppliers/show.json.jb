@@ -1,0 +1,1 @@
+render "suppliers/suppliers", supplier: @supplier

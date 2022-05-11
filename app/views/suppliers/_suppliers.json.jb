@@ -1,0 +1,17 @@
+{
+  id: supplier.id,
+  name: supplier.name,
+  email: supplier.email,
+  phone_number: supplier.phone_number,
+# created_at: supplier.created_at,
+# updated_at: supplier.updated_at,
+# description: supplier.description,
+# image_url: supplier.image_url,
+# friendly_created: supplier.friendly_created,
+# friendly_updated: supplier.friendly_updated,
+# dollar_price: supplier.dollar_price,
+# tax: supplier.tax,
+# total: supplier.total,
+# total_in_dollar: supplier.total_in_dollar,
+# is_discounted?: supplier.is_discounted?,
+}

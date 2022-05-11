@@ -1,0 +1,8 @@
+render partial: "suppliers/suppliers", collection: @suppliers, as: :supplier
+
+# @suppliers.map do |supplier|
+#   {
+#     id: supplier.id,
+#     url: supplier_url(supplier, format: :json)
+#   }
+# end

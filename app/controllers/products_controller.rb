@@ -20,14 +20,13 @@ class ProductsController < ApplicationController
     if product.save
       render template: "products/show"
     else
-      render json: { message: "Please check your input values." }
+      render json: { message: product.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
   def update
     product_id = params[:id]
     product = Product.find_by(id: product_id)
-
     product.name = params["name"] || product.name
     product.price = params["price"] || product.price
     product.description = params["description"] || product.description
@@ -36,7 +35,7 @@ class ProductsController < ApplicationController
     if product.save
       render template: "products/show"
     else
-      render json: { message: "Please check your input values." }
+      render json: { message: product.errors.full_messages }, status: :unprocessable_entity
     end
   end
 

@@ -1,4 +1,5 @@
 render partial: "products/products", collection: @products, as: :product
+
 # @products.map do |product|
 #   {
 #   id: product.id,
