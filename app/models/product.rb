@@ -35,4 +35,8 @@ class Product < ApplicationRecord
   def total_in_dollar
     "$#{total.round(2)}"
   end
+
+  def supplier
+    Supplier.find_by(id: supplier_id)
+  end
 end

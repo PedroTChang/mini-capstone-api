@@ -10,6 +10,7 @@
   dollar_price: product.dollar_price,
   tax: product.tax,
   total: product.total,
+  supplier: product.supplier,
   total_in_dollar: product.total_in_dollar,
   is_discounted?: product.is_discounted?,
 }
