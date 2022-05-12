@@ -1,7 +1,7 @@
 class Image < ApplicationRecord
   # validates :image_url, format: { with: %r{\.(gif|jpg|png)\Z}i }
 
-  def products
+  def product
     Product.find_by(id: product_id)
   end
 end
