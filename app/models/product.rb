@@ -6,7 +6,6 @@ class Product < ApplicationRecord
   validates :description, length: { in: 10..500 }
   validates :price, numericality: true
   validates :price, numericality: { greater_than: 0 }
-  # validates :image_url, format: { with: %r{\.(gif|jpg|png)\Z}i }
 
   def dollar_price
     return "$#{price}"
@@ -38,5 +37,9 @@ class Product < ApplicationRecord
 
   def supplier
     Supplier.find_by(id: supplier_id)
+  end
+
+  def images
+    Image.where(product_id: id)
   end
 end
