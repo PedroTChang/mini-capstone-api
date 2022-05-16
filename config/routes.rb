@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   # post "images" => "images#create"
   # patch "images" => "images#update"
   # delete "images" => "images#destroy"
+  post "users" => "users#create"
 end
