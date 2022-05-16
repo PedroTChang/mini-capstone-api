@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   # patch "images" => "images#update"
   # delete "images" => "images#destroy"
   post "users" => "users#create"
+  post "/sessions" => "sessions#create"
 end
