@@ -8,6 +8,7 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 0 }
   belongs_to :supplier
   has_many :images
+  has_many :orders
 
   def dollar_price
     return "$#{price}"

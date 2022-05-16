@@ -12,7 +12,7 @@ class SuppliersController < ApplicationController
   def create
     supplier = Supplier.new(
       name: params["name"],
-      email: params[email:],
+      email: params["email"],
       phone_number: params[phone_number:],
       # price: params["price"],
       # description: params["description"],
@@ -30,8 +30,8 @@ class SuppliersController < ApplicationController
     supplier_id = params[:id]
     supplier = Supplier.find_by(id: supplier_id)
     supplier.name = params["name"] || supplier.name
-    supplier.email = params[email:] || supplier.email
-    supplier.phone_number = params[phone_number:] || supplier.phone_number
+    supplier.email = params["email"] || supplier.email
+    supplier.phone_number = params["phone_number"] || supplier.phone_number
     # supplier.price = params["price"] || supplier.price
     # supplier.description = params["description"] || supplier.description
     # supplier.image_url = params["image_url"] || supplier.image_url

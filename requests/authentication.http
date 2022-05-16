@@ -17,3 +17,18 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+
+### Orders show
+GET http://localhost:3000/orders/1
+Content-Type: application/json
+
+### Orders create
+POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MjA1MTd9.94IdzdYCvRipVRdpQUavXu3heHPdR-JHq2OR6pD4TMQ
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "product_id": 2,
+  "quantity": 1
+}
