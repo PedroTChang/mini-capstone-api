@@ -1,0 +1,18 @@
+{
+  id: product.id,
+  name: product.name,
+  created_at: product.created_at,
+  updated_at: product.updated_at,
+  description: product.description,
+  friendly_created: product.friendly_created,
+  friendly_updated: product.friendly_updated,
+  dollar_price: product.dollar_price,
+  subtotal: order.subtotal,
+  tax: order.tax,
+  total: order.total,
+  supplier: product.supplier,
+  quality: product.quantity,
+  images: product.images,
+  total_in_dollar: product.total_in_dollar,
+  is_discounted?: product.is_discounted?,
+}

@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4OTExMTZ9.jLaVqVOCywNtIu0h5rKmirfyb4pvm3YGHnhRLijwz_s
+
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
@@ -17,14 +19,19 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+### Orders Index
+GET http://localhost:3000/orders.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
 
 ### Orders show
-GET http://localhost:3000/orders/1
+GET http://localhost:3000/orders/2
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 ### Orders create
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MjA1MTd9.94IdzdYCvRipVRdpQUavXu3heHPdR-JHq2OR6pD4TMQ
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
