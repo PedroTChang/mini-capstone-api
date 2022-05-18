@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
   def index
     if current_user
-      @orders = Order.where(id: params["id"])
-      render json: orders.as_json
+      @orders = current_user.orders
+      render template: "orders/index"
     else
       render json: { message: order.errors.full_messages }, status: :unprocessable_entity
     end
@@ -10,8 +10,8 @@ class OrdersController < ApplicationController
 
   def show
     if current_user
-      @order = current_user.orders
-      render json: order.as_json
+      @order = current_user.orders.find_by(id: params[:id])
+      render template: "orders/show"
     else
       render json: [], status: :unprocessable_entity
     end
@@ -33,7 +33,7 @@ class OrdersController < ApplicationController
         total: calculated_total,
       )
       order.save
-      render json: { message: "Order created." }
+      render template: "orders/create"
     else
       render json: [], status: :unprocessable_entity
     end

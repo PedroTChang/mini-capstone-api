@@ -7,6 +7,7 @@
   friendly_created: product.friendly_created,
   friendly_updated: product.friendly_updated,
   dollar_price: product.dollar_price,
+  categories: product.categories,
   tax: product.tax,
   total: product.total,
   supplier: product.supplier,

@@ -9,6 +9,8 @@ class Product < ApplicationRecord
   belongs_to :supplier
   has_many :images
   has_many :orders
+  has_many :category_products
+  has_many :categories, through: :category_products
 
   def dollar_price
     return "$#{price}"
@@ -37,6 +39,13 @@ class Product < ApplicationRecord
   def total_in_dollar
     "$#{total.round(2)}"
   end
+
+  # def categories
+  #   category_products.map do |category_product|
+  #     category_product.category
+  #   end
+  #   return categories_array
+  # end
 
   # def supplier
   #   Supplier.find_by(id: supplier_id)

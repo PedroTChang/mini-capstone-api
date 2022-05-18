@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4OTExMTZ9.jLaVqVOCywNtIu0h5rKmirfyb4pvm3YGHnhRLijwz_s
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI5MDQzNjV9.qhLvV7QW-jtVA4fG1PN98NnzKekplrLegB_n8YV6vgM
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -13,29 +13,10 @@ Content-Type: application/json
 
 ### Sessions create (login)
 POST http://localhost:3000/sessions.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
   "email": "test@test.com",
   "password": "password"
-}
-### Orders Index
-GET http://localhost:3000/orders.json
-Authorization: Bearer {{jwt}}
-Content-Type: application/json
-
-### Orders show
-GET http://localhost:3000/orders/2
-Authorization: Bearer {{jwt}}
-Content-Type: application/json
-
-### Orders create
-POST http://localhost:3000/orders.json
-Authorization: Bearer {{jwt}}
-Content-Type: application/json
-
-{
-  "user_id": 1,
-  "product_id": 2,
-  "quantity": 1
 }
