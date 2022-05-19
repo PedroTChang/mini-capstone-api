@@ -10,12 +10,13 @@ class CartedProductsController < ApplicationController
 
   def create
     cart = CartedProduct.new(
-      product_id: 1,
-      quantity: 1,
+      product_id: params[:product_id],
+      quantity: params[:quantity],
       user_id: current_user.id,
       order_id: nil,
       status: "carted",
     )
+    cart.save
     render json: cart.as_json
   end
 end
