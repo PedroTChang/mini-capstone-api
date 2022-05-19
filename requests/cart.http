@@ -1,5 +1,9 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTMwNzI0MjN9.UpU8KbCkovUdYly8kNw6F5uFHoN75JX81oqIcXCFcW4
 
+### Index
+GET http://localhost:3000/carts.json
+Authorization: Bearer {{jwt}}
+
 ### Create
 POST http://localhost:3000/carts.json
 Authorization: Bearer {{jwt}}

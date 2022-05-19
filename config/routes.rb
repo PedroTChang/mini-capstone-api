@@ -30,6 +30,6 @@ Rails.application.routes.draw do
   get "orders/:id" => "orders#show"
   post "orders" => "orders#create"
 
-  # get "carts" => "carts#index"
+  get "carts" => "carted_products#index"
   post "carts" => "carted_products#create"
 end
