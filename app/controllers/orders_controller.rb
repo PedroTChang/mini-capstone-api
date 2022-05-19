@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
 
   def show
     if current_user
-      @order = current_user.orders.find_by(id: params[:id])
+      @order = Order.find_by(id: params[:id])
       render template: "orders/show"
     else
       render json: [], status: :unprocessable_entity
@@ -19,6 +19,7 @@ class OrdersController < ApplicationController
 
   def create
     product = Product.find_by(id: params["product_id"])
+
     calculated_subtotal = product.price * params[:quantity].to_i
     calculated_tax = calculated_subtotal * 0.0975
     calculated_total = calculated_subtotal + calculated_tax

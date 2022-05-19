@@ -5,6 +5,10 @@ class ProductsController < ApplicationController
     pp current_user
     @products = Product.all
     render template: "products/index"
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      @products = category.products
+    end
   end
 
   def show

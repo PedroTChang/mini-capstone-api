@@ -3,6 +3,12 @@ render partial: "orders/orders", collection: @orders, as: :order
 # @orders.map do |order|
 #   {
 #     id: order.id,
-#     url: order_url(order, format: :json)
+#     quantity: order.quantity,
+#     subtotal: order.subtotal,
+#     tax: order.tax,
+#     total: order.total,
+#     product: order.product,
+#     created_at: order.created_at,
+#     updated_at: order.updated_at,
 #   }
 # end

@@ -1,7 +1,15 @@
 render "orders/orders", order: @order
 
-# {
-#   id: @order.id,
-#   created_at: @order.created_at,
-#   updated_at: @order.updated_at
-# }
+# @orders.map do |order|
+#   {
+#     id: order.id,
+#     quantity: order.quantity,
+#     subtotal: order.subtotal,
+#     tax: order.tax,
+#     total: order.total,
+#     product: order.product,
+#     category: order.categories,
+#     created_at: order.created_at,
+#     updated_at: order.updated_at,
+#   }
+# end
