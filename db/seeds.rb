@@ -11,9 +11,16 @@ Product.create!([
   { name: "UPLIFT V2 Desk", price: "1000.0", description: "AA lifting sit-stand desk doesn’t keep you locked in your chair; you can stand up and move around with ease. The adjustable height standing desks come in new and used condition. Adjustable height features can lift electronically or manually. Allowing you to either sit or stand with better support. Researchers suggest that this aids health and increases productivity. It also will increase your energy levels so that you can focus on your project.", quantity: 13, supplier_id: 3 },
 ])
 
-Image.create!([
-  { url: "https://www.tesla.com/sites/default/files/images/blogs/p100d_social.jpg", product_id: 1 },
-  { url: "https://m.media-amazon.com/images/I/81TzR9+1IXL._AC_SL1500_.jpg", product_id: 2 },
-  { url: "https://m.media-amazon.com/images/I/71FB1Or+44L.jpg", product_id: 3 },
-  { url: "https://cdn.thewirecutter.com/wp-content/media/2021/03/standingdesk-2048px-5212-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024", product_id: 4 },
+Category.create!([
+  {name: "electronics"},
+  {name: "automobile"},
+  {name: "furniture"},
 ])
+
+# Image.create!([
+#   { url: "https://www.tesla.com/sites/default/files/images/blogs/p100d_social.jpg", product_id: 1 },
+#   { url: "https://m.media-amazon.com/images/I/81TzR9+1IXL._AC_SL1500_.jpg", product_id: 2 },
+#   { url: "https://m.media-amazon.com/images/I/71FB1Or+44L.jpg", product_id: 3 },
+#   { url: "https://cdn.thewirecutter.com/wp-content/media/2021/03/standingdesk-2048px-5212-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024", product_id: 4 },
+# ])
+

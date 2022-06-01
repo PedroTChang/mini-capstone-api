@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTMwNzI0MjN9.UpU8KbCkovUdYly8kNw6F5uFHoN75JX81oqIcXCFcW4
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTQxNDEwNjJ9.0naR_WXI4voC_NCJuVDJ4BuNO_WcSHLZWW1_Zrg48oc
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -13,7 +13,6 @@ Content-Type: application/json
 
 ### Sessions create (login)
 POST http://localhost:3000/sessions.json
-Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {

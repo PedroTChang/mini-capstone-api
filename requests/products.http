@@ -4,7 +4,7 @@ GET http://localhost:3000/products.json
 
 ### Products show
 GET http://localhost:3000/products/3.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI4MTIwODl9.Tmv7R8OsDY4zrvOwcRCbE_T9lMZI5OqCbq-0mKqfpKs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTM2ODYyNTZ9.72kyO-u24eCxFPug6YYF2qaDM-dPT1VvhKGl_oG4sFo
 Content-Type: application/json
 
 ### Products create

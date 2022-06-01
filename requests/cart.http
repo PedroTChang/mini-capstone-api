@@ -1,18 +1,20 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTMwNzI0MjN9.UpU8KbCkovUdYly8kNw6F5uFHoN75JX81oqIcXCFcW4
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTQxNDAzMzV9.db92UTeT-vhb8Y-P45sIfTP_prVdUkQP1CyM7LTR86Y
 
 ### Index
-GET http://localhost:3000/carts.json
+GET http://localhost:3000/carted_products.json
 Authorization: Bearer {{jwt}}
 
 ### Create
-POST http://localhost:3000/carts.json
+POST http://localhost:3000/carted_products.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "product_id": "1",
-  "quantity": "1",
-  "user_id": "1",
-  "order_id": "1",
-  "status": "empty"
+  "product_id": "3",
+  "quantity": "4"
 }
+
+### Destroy
+DELETE http://localhost:3000/carted_products/1.json
+Authorization: Bearer {{ jwt }}
+Content-Type: application/json

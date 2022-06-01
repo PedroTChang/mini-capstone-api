@@ -1,15 +1,17 @@
-render "orders/orders", order: @order
-
-# @orders.map do |order|
-#   {
-#     id: order.id,
-#     quantity: order.quantity,
-#     subtotal: order.subtotal,
-#     tax: order.tax,
-#     total: order.total,
-#     product: order.product,
-#     category: order.categories,
-#     created_at: order.created_at,
-#     updated_at: order.updated_at,
-#   }
-# end
+{
+  id: @order.id,
+  subtotal: @order.subtotal,
+  tax: @order.tax,
+  total: @order.total,
+  products: @order.products,
+  carted_products: @order.carted_products.map do |carted_product|
+    {
+      id: carted_product.id,
+      product: carted_product.product,
+      quantity: carted_product.quantity,
+      status: carted_product.status
+    }
+  end,
+  created_at: @order.created_at,
+  updated_at: @order.updated_at,
+}
