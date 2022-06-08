@@ -1,8 +1,1 @@
-{
-  id: @carted_product.id,
-  product: @carted_product.product,
-  quantity: @carted_product.quantity,
-  status: @carted_product.status
-  # created_at: @carted_product.created_at,
-  # updated_at: @carted_product.updated_at
-}
+render "carted_products/carted_products", carted_product: @carted_product

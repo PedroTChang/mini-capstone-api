@@ -1,0 +1,6 @@
+{
+  id: carted_product.id,
+  product: carted_product.product,
+  quantity: carted_product.quantity,
+  status: carted_product.status,
+}

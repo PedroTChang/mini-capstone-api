@@ -10,7 +10,7 @@
         id: carted_product.id,
         product: carted_product.product,
         quantity: carted_product.quantity,
-        status: carted_product.status
+        status: carted_product.status,
       }
     end,
     created_at: order.created_at,

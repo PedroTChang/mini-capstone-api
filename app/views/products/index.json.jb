@@ -1,18 +1,1 @@
 render partial: "products/products", collection: @products, as: :product
-
-# @products.map do |product|
-#   {
-#   id: product.id,
-#   created_at: product.created_at,
-#   updated_at: product.updated_at,
-#   description: product.description,
-#   image_url: product.image_url,
-#   friendly_created: product.friendly_created,
-#   friendly_updated: product.friendly_updated,
-#   dollar_price: product.dollar_price,
-#   tax: product.tax,
-#   total: product.total,
-#   total_in_dollar: product.total_in_dollar,
-#   is_discounted?: product.is_discounted?
-#   }
-# end

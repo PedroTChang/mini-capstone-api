@@ -1,58 +1,25 @@
 class Product < ApplicationRecord
   validates :name, presence: true
-  # validates :name, uniqueness: true
-  # validates :name, uniqueness: { case_sensitive: false }
+  validates :price, presence: true
+  validates :price, numericality: { greater_than: 0 }
   validates :description, presence: true
   validates :description, length: { in: 10..500 }
-  validates :price, numericality: true
-  validates :price, numericality: { greater_than: 0 }
   belongs_to :supplier
   has_many :images
-  has_many :orders
   has_many :category_products
   has_many :categories, through: :category_products
   has_many :carted_products
-
-  def dollar_price
-    return "$#{price}"
-  end
-
-  def friendly_created
-    return created_at.strftime("%A, %b %d")
-  end
-
-  def friendly_updated
-    return updated_at.strftime("%A, %b %d")
-  end
-
-  def tax
-    (price * 0.0975).round(2)
-  end
+  has_many :orders, through: :carted_products
 
   def is_discounted?
     price < 10
   end
 
+  def tax
+    (price * 0.09).round(2)
+  end
+
   def total
     (price + tax).round(2)
   end
-
-  def total_in_dollar
-    "$#{total.round(2)}"
-  end
-
-  # def categories
-  #   category_products.map do |category_product|
-  #     category_product.category
-  #   end
-  #   return categories_array
-  # end
-
-  # def supplier
-  #   Supplier.find_by(id: supplier_id)
-  # end
-
-  # def images
-  #   Image.where(product_id: id)
-  # end
 end

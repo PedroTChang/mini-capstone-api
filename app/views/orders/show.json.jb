@@ -5,12 +5,7 @@
   total: @order.total,
   products: @order.products,
   carted_products: @order.carted_products.map do |carted_product|
-    {
-      id: carted_product.id,
-      product: carted_product.product,
-      quantity: carted_product.quantity,
-      status: carted_product.status
-    }
+    render "carted_products/carted_products", carted_product: carted_product
   end,
   created_at: @order.created_at,
   updated_at: @order.updated_at,

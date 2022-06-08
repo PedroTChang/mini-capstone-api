@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTQxNDAzMzV9.db92UTeT-vhb8Y-P45sIfTP_prVdUkQP1CyM7LTR86Y
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTQ2Mjk2OTN9.7eChyM_Hin7ZHhOJ9DucY9OicN6aK7qzyqMGk7gh7uY
 
 ### Index
 GET http://localhost:3000/carted_products.json

@@ -1,8 +1,1 @@
-@carted_products.map do |carted_product|
-  {
-    id: carted_product.id,
-    products: carted_product.product,
-    quantity: carted_product.quantity,
-    status: carted_product.status
-  }
-end
+render partial: "carted_products/carted_products", collection: @carted_products, as: :carted_product

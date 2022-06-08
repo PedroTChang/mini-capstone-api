@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTQyMDc1Mjh9.CKVFsy5VbexM96RXN5wEHNGSv93QoxV8z7SxLCx1nZ4
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTQ2MzAwNDV9.ywV7-PS_Q7O1sXY9yGtsIc9J7hIHhnRS5XFOTlj_JXs
 
 ### Orders Index
 GET http://localhost:3000/orders.json
