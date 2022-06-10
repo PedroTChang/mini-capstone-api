@@ -7,7 +7,7 @@
   tax: product.tax,
   total: product.total,
   quantity: product.quantity,
-  supplier: product.supplier,
+  # supplier: product.supplier,
   images: product.images,
   categories: product.categories,
   created_at: product.created_at,
