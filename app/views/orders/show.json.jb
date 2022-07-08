@@ -1,4 +1,4 @@
-{
+p{
   id: @order.id,
   subtotal: @order.subtotal,
   tax: @order.tax,

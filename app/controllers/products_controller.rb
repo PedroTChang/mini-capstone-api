@@ -3,10 +3,32 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    if params[:category]
-      category = Category.find_by(name: params[:category])
-      @products = category.products
-    end
+    
+    # if params[:category]
+    #   category = Category.find_by(name: params[:category])
+    #   @products = category.products
+    # end
+
+    # if params[:search]
+    #   @products = @products.where("name ILIKE ?", "%#{params[:search]}")
+    # end
+
+    # if params[:discount]
+    #   @products = @products.where("price < ?", 1500)
+    # end
+
+    # if params[:sort] == "price"
+    #   if params[:sort_order] == "desc"
+    #     @products = @products.order(:price => :desc)
+    #   else
+    #     @products = @products.order(:price => :asc)
+    #   end
+    # else
+    #   @products = @products.order(:id => :asc)
+    # end
+
+
+
     render template: "products/index"
   end
 

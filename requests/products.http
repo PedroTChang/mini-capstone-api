@@ -1,7 +1,16 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTQ4MDAyMjN9.QUixvpYUUf8sJqz0V08YryeggmxEZFraBQPFn-wVTmU
 
 ### Products Index
-GET http://localhost:3000/products.json
+GET http://localhost:3000/products.json?search=s
+
+### Products Index
+GET http://localhost:3000/products.json?sort=price
+
+### Products Index
+GET http://localhost:3000/products.json?sort=price&sort_order=desc
+
+### Products Index
+GET http://localhost:3000/products.json?sort=price&sort_order=asc&discount=true
 
 
 ### Products show
